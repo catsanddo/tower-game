@@ -1,0 +1,45 @@
+- [X] SpriteLoad
+
+- [X] EntityNew
+- [X] EntityConstruct
+- [X] EntityFree
+- [X] EntityUpdate
+- [X] Proper movement
+- [X] tick function
+- [X] entity loading from file
+- [X] yes/no box
+- [X] triggers
+- [X] scripts with string literals
+- [X] audio
+- [X] loop music
+- [X] start game with event
+- [X] reset player animation when not moving (weird bug; see TODO in entity.c)
+- [ ] player direction on map change
+- [ ] fix audio pops in sfxs
+- [ ] final animation speeds
+- [ ] option to not loop audio
+- [ ] animation bug on triggers and walking into walls
+- [ ] script system make it have sequence of commands in one frame
+- [ ] save/load system
+
+- [ ] town npcs
+- [ ] mook
+- [ ] tower top endings
+- [ ] ruins ending
+
+- [X] cutscene system
+- [X] scripting
+
+- [X] input grab function
+- [X] input_lock in Game
+- [X] global flags (128 bytes == 1024 flags)
+
+- [X] make tools for editing tile types and entities
+
+- [ ] global script file
+- [ ] command buffer for cheatcodes
+- [ ] log file truncation
+- [ ] make curtain animation look pretty
+- [ ] verify framerate (I can't believe that it's right)
+- [ ] fix animation for higher framerate
+- [ ] make player finish a full cycle on animation end

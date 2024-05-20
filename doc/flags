@@ -1,0 +1,40 @@
+    0 - game start
+   11 - sword guy talk flag
+   12 - ghost girl talk flag
+   13 - skuller talk flag
+   14 - bug man talk flag
+   15 - dream worm talk flag
+   16 - mook talk flag
+   17 - seer talk flag
+20-23 - levers
+   24 - orb get
+   25 - orb place
+   26 - cave door
+   27 - got fruit
+   28 - gave fruit
+   29 - visited ruins
+
+63 - fade flag
+
+Dialogue flags
+Sword guy  - 100
+Ghost girl - 200
+Skuller    - 300
+Bug man    - 400
+Dream worm - 500
+Mook       - 600
+Seer       - 700
+
+
+ENTRANCES
+50 - 100 - forest
+51 - 101 - town
+52 - 102 - orb cave
+53 - 103 - sun cave
+54 - 104 - beach
+55 - 105 - swamp
+56 - 106 - ruins
+57 - 107 - tower cave
+58 - 108 - tower base
+59 - 109 - tower
+60 - 110 - tower top

@@ -1,0 +1,25 @@
+#0020 - Enter
+:TRK0006
+:FLJ0027 :EFR0200,0026
+:FDI :END
+
+#0100 - Forest exits
+:LCK :FDO :MAP0003,0078,0156
+#0101
+:LCK :FDO :MAP0003,0079,0156
+
+#0110 - Swamp exits
+:LCK :FDO :MAP0005,0037,0041
+#0111
+:LCK :FDO :MAP0005,0038,0041
+
+#0120 - Ruins exit
+:LCK :FDO :MAP0004,0020,0004
+
+#0200 - Fruit
+:LCK :TXT "It appears to be"
+"\nsome kind of fruit" :PAU
+:TCR "Take it?" :PYS :EVE0201
+:TCL :END
+#0201 - Take fruit
+:TCL :EFR0200,0026 :SFX0001 :FLS0027 :END

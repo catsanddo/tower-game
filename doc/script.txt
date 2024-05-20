@@ -1,0 +1,147 @@
+﻿Triggers:  
+1 First dialogue
+2 Took pala fruit
+3 Gave Elder the fruit
+4 Visited ruins
+5 Obtained star
+- Repeating line
+
+Intro:
+You dream of falling. 
+Brilliant lights flash before your eyes, and you see a golden spire that rises beyond the clouds. You feel yourself stop, and the cool air rests on your skin. You awaken standing in the middle of an indigo forest.
+
+
+  Bug Man: 
+1 Another one, hm? Or maybe it was you who was poking around those caves. Listen, I don’t want any part of your strange antics, so I think you should just go.
+-Hey! I have enough to worry about, alright?
+
+2 Didn’t I tell you to… hey! Is that a pala fruit? Um, maybe I was too harsh earlier; you wouldn’t mind sharing that with me, would you?
+-I’ll just take one bite!
+
+3 Hm? You gave it to that red freak?! You don’t intend to go up that tower, do you?
+-Don’t say I didn’t warn ya, kid. 
+
+
+4 Ruins down to the south? I don’t really know what you’re talking about. 
+-Hmm.
+
+
+5 Wait, I think I remember it now. The people were always talking about the source of all of this. Something about a fallen star… what’s that shiny thing you got with you there? So it was in the cave this whole time?
+-Hey kid, you’re really something, you know?
+
+  Dream Worm: 
+1 The tower divides and connects. Do you hear it calling you?
+-I wonder…
+
+2 A Pala fruit is a symbol of life and energy. Does the creator dictate the fate of the creation? Everything that is born is destined to die.
+-Can we really trust the fate of many to the thoughts of one?
+
+3 The entrance to the tower now lies open. You may ascend, and yet we remain.
+-In our solitude, can we remember our own past?
+
+4 There is a beginning to everything, even us. Creation started with the star. If you’ve seen the ruins, then you must understand. 
+-Think carefully about what you want to do.
+
+
+5 So the star still exists. You are the only one who can decide where it goes.
+-But who can claim ownership of this creation?
+
+
+
+  Ghost Girl: 
+1 Aaaaah! You scared me… 
+-You shouldn’t sneak up on people…
+
+
+2 Oh! Someone used to bring me pala fruit everyday. It’s been so long that I can’t even remember his face.
+-You’ll come and visit me again, right?
+
+
+3 Do you know where everyone went? 
+-Well, nevermind…
+
+
+4 It’s you again! I remember your face! 
+-Today I’ve been thinking about all of my favorite types of flowers.
+
+
+5 It’s really good to see you! Today I remembered a song that I used to sing. Maybe I can sing it for you… but you can’t watch me! 
+-Hey, there is something I want to tell you…
+
+
+  
+Mook: 
+1 Well, this is a surprise! Not many people come to visit old Mook at his pond; not since all those folks left topwards, haha!
+-Nope, nothing quite like the feeling of warm clay!
+
+
+2 I’m going to bring some mudpies to my little friend.
+-You don’t have to take off your shoes when you come to my house.
+
+
+3 The tower? No, I can’t say I know much about that. Ever since they built it, they’ve just been sitting around! 
+-Talk about a lazy afternoon!
+
+
+4 I’ve been to the ruins, but there is nothing quite like sitting on your own front porch. 
+-Don’t forget this; everything's better when you’re with a friend.
+
+5 Oh, me? I’m not one of those golems, hehe. I just like it here; this pond is nice and warm.
+-Will you be going back where you came from?
+
+  Skuller: 
+1 So you’re the one who has been bumping around in the woods down south. You’re causing quite a stir, you know. This cave behind me? No way, kid. I don’t move for anyone.
+-Okay… fine. You get me some sweet pala fruit, and maybe I’ll move for you.
+
+
+2 Haha, I didn’t think you’d actually go and do it! Yeah, this should give me enough strength to move aside for you. But don’t say I didn’t warn you; no one ever comes back from that tower.
+-I hope you know what you’re doing
+
+
+3 Have you spoken with the Dream Worm yet? He is the only one who really remembers anything.
+-I’d visit him myself if I could move this old body of mine.
+
+
+4 Ruins, you said? Hmmm, I remember hearing about those once or twice, yes. That won’t do us much good here, though.
+-This town is dying.
+
+
+5 Is that… the star? But wait, are you taking it with you? 
+-Don’t be in a hurry, kid…
+
+
+  Sword Guy: 
+1 A new face? Make sure you don’t cause any trouble here, because I’m watching you!
+-I’ve been guarding this town for as long as I’ve lived!
+
+
+2 Oh, this sword? Yeah, I bet you’d like to hold it, huh? It’s definitely too heavy for you, but it isn’t even a problem for me.
+-Heh, I can tell you’re impressed.
+
+
+3 So you’re leaving, then? You’re probably eager to follow those other folk, I guess. 
+-Maybe I’d join you… but I can’t leave my post.
+
+
+4 I bet you’ve seen some pretty cool stuff around here, right? Maybe you can tell me about it sometime?
+-I’ve never actually left the town.
+
+
+5 Hey, do you think you could take me with you sometime? We shouldn’t go too far from the town, but maybe just outside the gate?
+-Well, I’m not going anywhere in this state. I haven’t moved in years.
+
+
+
+
+Endings:
+
+Going up the tower without the star.
+Going up the tower with the star.
+Placing the star in the altar.
+
+
+Each of these trigger a basic credit roll with the ending music.
+
+A story by casual hero
+Programmed by cat
+Characters by ant hands

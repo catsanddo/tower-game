@@ -1,0 +1,37 @@
+Notes
+160x144
+scale 4
+16x16 tiles
+
+Maps
+Load maps from a file like json or metadesk
+Have one part specify the tilesheet
+Another provides the tilemap
+Another the collision map
+A section for entities
+Have a function to load all that up
+
+Menus
+Use a state machine for stuff like menus/dialog boxes
+
+Player action
+When the player presses "A"
+Check the square in front of the player
+If it contains a actionable entity
+    Then execute the action
+Else do nothing
+
+Player movement
+Player presses a direction key
+If the space they're facing is not blocked
+    Then switch to a moving state
+    Until movement is finished animate the player moving to their destination
+    When movement finished return control to player at their new position
+Else do nothing
+
+Opening the menu
+Player presses menu button
+Button is handled according to current state
+When state allows opening the menu for that action
+    Push the menu onto the state stack
+    Pop it off when finished to resume previous play

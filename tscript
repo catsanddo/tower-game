@@ -1,0 +1,78 @@
+.tsc
+
+~~case insensitive~~
+simple commands
+one command executed per frame
+4 digit numbers
+# designates new event followed by event id
+: designates new command followed by args
+; disignates comment to the end of line
+args can be comma seperated
+whitespace insensitive
+
+# Entity Flags
+    ENTITY_ACTIVE       = 1,
+    ENTITY_VISIBLE      = 2,
+    ENTITY_PLAYER       = 4,
+    ENTITY_SOLID        = 8,
+    ENTITY_INTERACTABLE = 16,
+    ENTITY_TRIGGER      = 32,
+    ENTITY_ANIMATE      = 64,
+
+
+#0000
+:LCK - (  ) lock player input
+:ANI - (  ) enable animations
+:NAN - (  ) disable animations
+:WAT - ( n ) wait for n millis
+
+:FDI - (  ) fade screen in
+:FDO - (  ) fade screen out
+
+:TXT - (  ) open top dialogue box
+:TXB - (  ) open bottom dialogue box
+:TCR - (  ) clear dialogue box
+:TCL - (  ) close dialogue box
+
+:EPS - ( id,x,y ) set entity x,y by id
+:EMV - ( id,dir,amount ) move entity id in direction by amount
+:EAN - ( id,n ) select "animation" for an entity
+
+:EFJ - ( id,flag ) if flag is set on entity, skip don't next instruction
+:EFS - ( id,flag ) set flag on entity
+:EFR - ( id,flag ) reset flag on entity
+
+:FLJ - ( flag ) if global flag is set, skip next instruction
+:FLS - ( flag ) set global flag
+:FLR - ( flag ) reset global flag
+
+:END - (  ) end the current event script
+:SKP - ( n ) skip the next n instructions
+:EVE - ( id ) jump to event id
+:PAU - (  ) wait for action to be pressed
+:PYS - (  ) prompt yes or no; if no skip next
+:PNO - (  ) prompt no or yes; if no skip next
+
+:MAP - ( mapID,x,y ) jump to new map at x and y; enter map at event 20
+:CUT - ( cutsceneID ) trigger new cutscene
+
+#0400 - Elder move
+:FLJ0050 :CUT0000 :FLS0050 :END
+
+#0020 - Enter room
+:FDI :END
+
+#0045 - Orb place
+:LCK :FLJ0024 :SKP0003 :FLS0025 :EAN0000,0001 :EFR0000,0128 :END
+
+#0046 - check levers
+:LCK :FLJ0020 :SKP0003 :FLR0020 :EAN0046,0000 :SKP0002
+:FLS0020 :EAN0046,0001
+
+:FLJ0020 :SKP0001 :SKP0011
+:FLJ0021 :SKP0009
+:FLJ0022 :SKP0007
+:FLJ0023 :SKP0001 :SKP0004
+:FLS0026
+:TXT"You hear a faint click.":TWT:TCL
+:END

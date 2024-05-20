@@ -1,0 +1,25 @@
+#0020 - Enter
+:TRK0004
+:FLJ0024 :EFR0300,0026
+:FLJ0026 :EVE0021
+:FDI :END
+#0021 - Open door
+:EAN0200,0001 :EFR0200,0008
+:FDI :END
+
+#0100 - Forest exit
+:LCK :FDO :MAP0003,0163,0124
+
+#0110 - Swamp exit
+:LCK :FDO :MAP0005,0066,0008
+
+#0200 - Door
+:END
+
+#0300 - Cave orb
+:LCK :TXT "You find a strange"
+"\norb" :PAU
+:TCR "Take it?" :PYS :EVE0301
+:TCL :END
+#0301 - Take orb
+:TCL :EFR0300,0026 :SFX0001 :FLS0024 :END

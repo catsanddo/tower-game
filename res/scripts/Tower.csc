@@ -1,0 +1,10 @@
+#0020 - Enter
+:TRK0008
+:FDI :END
+:LCK :FDO :MAP0008,0015,0013
+
+#0100 - Tower Entrace exit
+:LCK :FDO :MAP0008,0015,0013
+
+#0110 - Tower Top exit
+:LCK :FDO :MAP0009,0011,0012

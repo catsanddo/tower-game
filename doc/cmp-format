@@ -1,0 +1,22 @@
+LITTLE ENDIAN
+
+magic            | 4  | "CMP" $5a
+width            | 4  | unsigned
+height           | 4  | unsigned
+tilesheet        | 16 | res/tilesheets/*.png - only *
+entity_count     | 4  | # of entities
+tile_sheet_count | 4  | size of tile types section
+base color       | 4  | rgba8888
+accent color     | 4  | rgba8888
+
+tile_map         | ~  | indexes; one word per width * height
+
+entities         | ~  | 16 bytes per entry
+	dword - entity type
+	dword - x position
+	dword - y position
+	dword - eventID
+
+tile_types       | ~  | size of tile_sheet_count; 1 byte per tile
+	0 - background
+	1 - solid
