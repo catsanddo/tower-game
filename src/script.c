@@ -211,28 +211,37 @@ int ScriptInterpret(Game *game) {
         // } else {
         //     TextBoxAppend(game->renderer, text);
         // }
-        char text = script->buffer.str[script->offset];
-        if (text == '\\') {
-            script->offset += 1;
-            switch (script->buffer.str[script->offset]) {
-                case '\\':
-                    text = '\\';
-                break;
-                case '"':
-                    text = '"';
-                break;
-                case 'n':
-                    text = '\n';
+        int loops = 1;
+        if (game->input.cancel) {
+            loops = 4;
+        }
+        for (int i = 0; i < loops; ++i) {
+            if (script->buffer.str[script->offset] == '"') {
                 break;
             }
-        }
+            char text = script->buffer.str[script->offset];
+            if (text == '\\') {
+                script->offset += 1;
+                switch (script->buffer.str[script->offset]) {
+                    case '\\':
+                        text = '\\';
+                    break;
+                    case '"':
+                        text = '"';
+                    break;
+                    case 'n':
+                        text = '\n';
+                    break;
+                }
+            }
         
-        if (text == '\n') {
-            TextBoxNewLine(game->renderer);
-        } else {
-            TextBoxAppend(game->renderer, (String) {&text, 1});
+            if (text == '\n') {
+                TextBoxNewLine(game->renderer);
+            } else {
+                TextBoxAppend(game->renderer, (String) {&text, 1});
+            }
+            script->offset += 1;
         }
-        script->offset += 1;
         return SCRIPT_RUNNING;
     } else if (script->buffer.str[script->offset] != ':') {
         while (script->offset < script->buffer.len) {
