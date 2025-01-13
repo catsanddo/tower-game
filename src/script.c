@@ -369,6 +369,7 @@ int ScriptInterpret(Game *game) {
         CE_u64 map_index = ScriptGetArg(script, 0);
         CE_u64 x = ScriptGetArg(script, 1);
         CE_u64 y = ScriptGetArg(script, 2);
+        CE_u64 dir = ScriptGetArg(script, 3);
 
         // TODO: handle error case
         if (map_index < StaticArraySize(map_names)) {
@@ -378,7 +379,8 @@ int ScriptInterpret(Game *game) {
                 return SCRIPT_DONE;
             }
             Vec2 pos = {x, y};
-            EntityNew(game, ET_PLAYER, pos, 0);
+            Entity *player = EntityGet(game, EntityNew(game, ET_PLAYER, pos, 0));
+            SpriteSetAnimation(game->renderer, player->sprite, dir);
 
             ScriptStartEvent(game, 20);
             return SCRIPT_RUNNING;

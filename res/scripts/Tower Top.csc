@@ -3,7 +3,7 @@
 :FDI :END
 
 #0100 - Tower exit
-:LCK :FDO :MAP0010,0058,0051
+:LCK :FDO :MAP0010,0058,0051,0003
 
 #0200 - Game ending trigger
 :SFX0002 :END

@@ -53,7 +53,7 @@ whitespace insensitive
 :PYS - (  ) prompt yes or no; if no skip next
 :PNO - (  ) prompt no or yes; if no skip next
 
-:MAP - ( mapID,x,y ) jump to new map at x and y; enter map at event 20
+:MAP - ( mapID,x,y,dir ) jump to new map at x and y, facing dir; enter map at event 20
 :CUT - ( cutsceneID ) trigger new cutscene
 
 #0400 - Elder move

@@ -206,6 +206,9 @@ void EntityUpdate(Game *game)
                         entity->co.position.y == target.y) {
                     if (!ScriptStartEvent(game, entity->eventID)) {
                         // TODO: find a better way to request quitting
+                        // Wait, what's happening here?
+                        // Is this supposed to be a graceful crash??
+                        // Where's the logging???
                         game->input.quit = 1;
                     }
                 }

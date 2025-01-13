@@ -14,7 +14,7 @@
 - [X] loop music
 - [X] start game with event
 - [X] reset player animation when not moving (weird bug; see TODO in entity.c)
-- [ ] player direction on map change
+- [X] player direction on map change
 - [ ] fix audio pops in sfxs
 - [ ] final animation speeds
 - [ ] option to not loop audio
@@ -44,3 +44,5 @@
 - [ ] verify framerate (I can't believe that it's right)
 - [ ] fix animation for higher framerate
 - [ ] make player finish a full cycle on animation end
+
+- [ ] save log to new location on fatal crash
