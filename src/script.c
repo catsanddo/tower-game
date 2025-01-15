@@ -336,6 +336,26 @@ int ScriptInterpret(Game *game) {
         } else {
             script->offset += 9;
         }
+    } else if (cmd_name[1] == 'E' && cmd_name[2] == 'M' && cmd_name[3] == 'V') {
+        CE_u64 eventID = ScriptGetArg(script, 0);
+        CE_u64 dir = ScriptGetArg(script, 1);
+        CE_u64 amount = ScriptGetArg(script, 2);
+
+        Entity *entity = EntityGet(game, EntityGetByEventID(game, eventID));
+        switch (dir) {
+            case DOWN_ANIMATION:
+                entity->co.position.y += amount;
+                break;
+            case RIGHT_ANIMATION:
+                entity->co.position.x += amount;
+                break;
+            case LEFT_ANIMATION:
+                entity->co.position.x -= amount;
+                break;
+            case UP_ANIMATION:
+                entity->co.position.y -= amount;
+                break;
+        }
     } else if (cmd_name[1] == 'E' && cmd_name[2] == 'A' && cmd_name[3] == 'N') {
         CE_u64 eventID = ScriptGetArg(script, 0);
         CE_u64 animation = ScriptGetArg(script, 1);

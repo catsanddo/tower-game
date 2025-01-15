@@ -16,15 +16,26 @@
 - [X] reset player animation when not moving (weird bug; see TODO in entity.c)
 - [X] player direction on map change
 - [ ] fix audio pops in sfxs
-- [ ] final animation speeds
 - [ ] option to not loop audio
-- [ ] animation bug on triggers and walking into walls
-- [ ] script system make it have sequence of commands in one frame
+- [?] script system make it have sequence of commands in one frame
 - [ ] save/load system
 
+Pre-alpha release
+- [ ] save log to new location on fatal crash
+- [ ] final animation speeds
+- [X] elder fruit cutscene
+- [ ] adjust font to remove accidental swears
+- [ ] placeholder end screens
+- [ ] title screen
+- [ ] animation bug on triggers and walking into walls
+- [ ] final music
+- [ ] remove debug elements
+
+- [ ] elder move sfx
+
 - [ ] instant text system (in single quotes maybe) (Bug man's "hey!")
-- [ ] town npcs
-- [ ] mook
+- [X] town npcs
+- [X] mook
 - [ ] tower top endings
 - [ ] ruins ending
 
@@ -39,10 +50,7 @@
 
 - [ ] global script file
 - [ ] command buffer for cheatcodes
-- [ ] log file truncation
 - [ ] make curtain animation look pretty
 - [ ] verify framerate (I can't believe that it's right)
 - [ ] fix animation for higher framerate
 - [ ] make player finish a full cycle on animation end
-
-- [ ] save log to new location on fatal crash

@@ -1,5 +1,7 @@
 #0020
 :TRK0008
+:FLJ0028
+:EMV0500,0001,0001
 :FDI :END
 
 #0100 - Forest exits
@@ -274,7 +276,8 @@
 "\nNo one ever comes"
 "\nback from that"
 "\ntower." :PAU
-:TCL :FLS0028 :FLS0301 :END
+:TCL :FLS0028 :FLS0301
+:CUT0000 :END
 #0503 - after got fruit
 :FLJ0028 :EVE0504
 :TXB "I hope you know"

@@ -42,7 +42,7 @@ whitespace insensitive
 :EFS - ( id,flag ) set flag on entity
 :EFR - ( id,flag ) reset flag on entity
 
-:FLJ - ( flag ) if global flag is set, skip next instruction
+:FLJ - ( flag ) if global flag is set, take next instruction (otherwise skip it)
 :FLS - ( flag ) set global flag
 :FLR - ( flag ) reset global flag
 
