@@ -17,7 +17,7 @@
 :TXB "A new face?" :PAU
 "\nMake sure you don't"
 "\ncause any trouble"
-"\nhere, because I'm"
+"\nhere,because I'm"
 "\nwatching you!" :PAU
 :TCL :FLS0100 :END
 #0201 - after first
@@ -29,18 +29,18 @@
 :TCL :END
 #0202 - got fruit
 :FLJ0101 :EVE0203
-:TXB "Oh, this sword?" :PAU
-"\nYeah, I bet you'd"
+:TXB "Oh,this sword?" :PAU
+"\nYeah,I bet you'd"
 "\nlike to hold it,"
 "\nhuh?" :PAU
 "\nIt's definitely too"
-"\nheavy for you, but"
+"\nheavy for you,but"
 "\nit isn't even a"
 "\nproblem for me." :PAU
 :TCL :FLS0101 :END
 #0203 - after got fruit
 :FLJ0028 :EVE0204
-:TXB "Heh, I can tell"
+:TXB "Heh,I can tell"
 "\nyou're impressed." :PAU
 :TCL :END
 #0204 - gave fruit
@@ -49,7 +49,7 @@
 "\nthen?" :PAU
 "\nYou're probably"
 "\neager to follow"
-"\nthose other folk, I"
+"\nthose other folk,I"
 "\nguess." :PAU
 :TCL :FLS0102 :END
 #0205 - after gave fruit
@@ -75,7 +75,7 @@
 :TCL :END
 #0208 - got orb
 :FLJ0104 :EVE0209
-:TXB "Hey, do you think"
+:TXB "Hey,do you think"
 "\nyou could take me"
 "\nwith you sometime?" :PAU
 "\nWe shouldn't go too"
@@ -84,7 +84,7 @@
 "\noutside the gate?" :PAU
 :TCL :FLS0104 :END
 #0209 - after got orb
-:TXB "Well, I'm not going"
+:TXB "Well,I'm not going"
 "\nanywhere in this"
 "\nstate." :PAU
 "\nMy body doesn't"
@@ -126,7 +126,7 @@
 :TCL :FLS0202 :END
 #0305 - after gave fruit
 :FLJ0029 :EVE0306
-:TXB "Well, nevermind..." :PAU
+:TXB "Well,nevermind..." :PAU
 :TCL :END
 #0306 - visited ruins
 :FLJ0203 :EVE0307
@@ -154,21 +154,21 @@
 "\nwatch me!" :PAU
 :TCL :FLS0204 :END
 #0309 - after got orb
-:TXB "Hey, there is"
+:TXB "Hey,there is"
 "\nsomething I want"
 "\nto tell you..." :PAU
 :TCL :END
 
 #0400 - Ant man
 :LCK :FLJ0400 :EVE0401
-:TXB "Another one, hm?" :PAU
+:TXB "Another one,hm?" :PAU
 "\nOr maybe it was"
 "\nyou who was poking"
 "\naround those caves." :PAU
-"\nListen, I don't"
+"\nListen,I don't"
 "\nwant any part of"
 "\nyour strange"
-"\nantics, so I think" :PAU
+"\nantics,so I think" :PAU
 "\nyou should just go." :PAU
 :TCL :FLS0400 :END
 #0401 - after first
@@ -180,10 +180,10 @@
 #0402 - Got fruit
 :FLJ0401 :EVE0403
 :TXB "Did't I tell you"
-"\nto... hey!" :PAU
+"\nto...hey!" :PAU
 "\nDo I smell pala"
 "\nfruit on you?" :PAU
-"\nUm, maybe I was too"
+"\nUm,maybe I was too"
 "\nharsh earlier..."
 "\nDo you have any"
 "\nleft?" :PAU
@@ -205,7 +205,7 @@
 #0405 - after gave fruit
 :FLJ0029 :EVE0406
 :TXB "Don't say I didn't"
-"\nwarn ya, kid." :PAU
+"\nwarn ya,kid." :PAU
 :TCL :END
 #0406 - Visited ruins
 :FLJ0403 :EVE0407
@@ -221,7 +221,7 @@
 :TCL :END
 #0408 - Got star
 :FLJ0404 :EVE0409
-:TXB "Wait, I think I"
+:TXB "Wait,I think I"
 "\nremember now." :PAU
 "\nSomething about a"
 "\nfallen star..." :PAU
@@ -233,7 +233,7 @@
 "\ntime?" :PAU
 :TCL :FLS0404 :END
 #0409 - after got star
-:TXB "Hey kid, you're"
+:TXB "Hey kid,you're"
 "\nreally something,"
 "\nyou know?" :PAU
 :TCL :END
@@ -246,17 +246,17 @@
 "\nthe woods down"
 "\nsouth." :PAU
 "\nYou're causing"
-"\nquite a stir, you"
+"\nquite a stir,you"
 "\nknow." :PAU
 "\nThis cave behind"
 "\nme?" :PAU
-"\nNo way, kid. I"
+"\nNo way,kid.I"
 "\ndon't move for"
 "\nanyone." :PAU
 :TCL :FLS0300 :END
 #0501 - after first
 :FLJ0027 :EVE0502
-:TXB "Okay... fine." :PAU
+:TXB "Okay...fine." :PAU
 "\nYou get me some"
 "\nsweet pala fruit,"
 "\nand maybe I'll"
@@ -264,14 +264,14 @@
 :TCL :END
 #0502 - Got fruit
 :FLJ0301 :EVE0503
-:TXB "Haha, I didn't"
+:TXB "Haha,I didn't"
 "\nthink you'd"
 "\nactually go and do"
 "\nit!" :PAU
-"\nYeah, this should"
+"\nYeah,this should"
 "\nbe just enough for"
 "\nme to move." :PAU
-"\nHey, don't say I"
+"\nHey,don't say I"
 "\ndidn't warn you." :PAU
 "\nNo one ever comes"
 "\nback from that"
@@ -299,10 +299,10 @@
 :TCL :END
 #0506 - Visited ruins
 :FLJ0303 :EVE0507
-:TXB "Ruins, you said?" :PAU
-"\nHmmm, I remember"
+:TXB "Ruins,you said?" :PAU
+"\nHmmm,I remember"
 "\nhearing about those"
-"\nonce or twice, yes." :PAU
+"\nonce or twice,yes." :PAU
 "\nThat won't do us"
 "\nmuch good here,"
 "\nthough." :PAU
@@ -314,14 +314,14 @@
 :TCL :END
 #0508 - Got star
 :FLJ0304 :EVE0509
-:TXB "Is that... the"
+:TXB "Is that...the"
 "\nstar?" :PAU
-"\nBut wait, are you"
+"\nBut wait,are you"
 "\ntaking it with you?" :PAU
 :TCL :FLS0304 :END
 #0509 - after got star
 :TXB "Don't be in a"
-"\nhurry, kid..." :PAU
+"\nhurry,kid..." :PAU
 :TCL :END
 
 
@@ -360,7 +360,7 @@
 :TXB "The entrance to the"
 "\ntower now lies"
 "\nopen." :PAU
-"\nYou may ascend, and"
+"\nYou may ascend,and"
 "\nyet we remain." :PAU
 :TCL :FLS0502 :END
 #0605 - after gave fruit
@@ -373,17 +373,17 @@
 :FLJ0503 :EVE0607
 :TXB "There is a"
 "\nbeginning to"
-"\neverything, even"
+"\neverything,even"
 "\nus." :PAU
 "\nOur physical"
 "\nmanifestation in"
 "\nthis realm has long"
 "\nsince eroded away," :PAU
 "\nbut our Spirits"
-"\nremain, binding us"
+"\nremain,binding us"
 "\nto this realm." :PAU
 "\nIf you've seen the"
-"\nruins, then you"
+"\nruins,then you"
 "\nmust understand." :PAU
 :TCL :FLS0503 :END
 #0607 - after visited ruins

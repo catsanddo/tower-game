@@ -12,18 +12,18 @@
 
 #0200 - Mook
 :LCK :FLJ0600 :EVE0201
-:TXB "Well, this is a"
+:TXB "Well,this is a"
 "\nsurprise!" :PAU
 "\nNot many people"
 "\ncome to visit old  "
 "\nMook at his pond;" :PAU
 "\nnot since all those"
 "\nfolks left"
-"\ntopwards, haha!" :PAU
+"\ntopwards,haha!" :PAU
 :TCL :FLS0600 :END
 #0201 - after first
 :FLJ0027 :EVE0202
-:TXB "Nope, nothing quite"
+:TXB "Nope,nothing quite"
 "\nlike the feeling of"
 "\nwarm clay!" :PAU
 :TCL :END
@@ -43,11 +43,11 @@
 #0204 - Gave fruit
 :FLJ0602 :EVE0205
 :TXB "The tower?" :PAU
-"\nNo, I can't say I"
+"\nNo,I can't say I"
 "\nknow much about"
 "\nthat." :PAU
 "\nEver since they"
-"\nbuilt it, they've"
+"\nbuilt it,they've"
 "\njust been sitting"
 "\naround!" :PAU
 :TCL :FLS0602 :END
@@ -59,7 +59,7 @@
 #0206 - Visited ruins
 :FLJ0603 :EVE0207
 :TXB "I've been to the"
-"\nruins, but there is"
+"\nruins,but there is"
 "\nnothing quite like"
 "\nsitting on your own" :PAU
 "\nfront porch." :PAU
@@ -73,11 +73,11 @@
 :TCL :END
 #0208 - Got star
 :FLJ0604 :EVE0209
-:TXB "Oh, me?" :PAU
+:TXB "Oh,me?" :PAU
 "\nI'm not one of"
-"\nthose golems, hehe." :PAU
+"\nthose golems,hehe." :PAU
 "\nI just like it"
-"\nhere. This pond is"
+"\nhere.This pond is"
 "\nnice and warm." :PAU
 :TCL :FLS0604 :END
 #0209 - after got star

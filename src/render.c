@@ -140,7 +140,49 @@ static void SpritesDraw(Renderer *renderer) {
     }
 }
 
-static void TextBoxDraw(Renderer *renderer) {
+static SDL_Surface *RenderText(char *text, SDL_Color fg, SDL_Color bg)
+{
+    CE_u64 length = strlen(text);
+    int w = length * 7 + 1;
+    int h = 8;
+    int letter_x = 1;
+
+    SDL_Surface *result = SDL_CreateRGBSurface(0, w, h, 32, 0, 0, 0, 0);
+    CE_u32 *buffer = result->pixels;
+    CE_u32 fg_color = SDL_MapRGB(result->format, fg.r, fg.g, fg.b);
+    CE_u32 bg_color = SDL_MapRGB(result->format, bg.r, bg.g, bg.b);
+    SDL_FillRect(result, 0, bg_color);
+
+    while (*text != 0) {
+        CE_u8 *byte = &font[*text * 8];
+        int flag = 0;
+        if (*text == 'o') {
+            flag = 1;
+        }
+        for (int y = 0; y < 8; ++y) {
+            int head = 0x80;
+            for (int x = 0; x < 8; ++x) {
+                CE_u32 color;
+                if (*byte & head) {
+                    color = *(CE_u32 *) &fg_color;
+                } else {
+                    color = *(CE_u32 *) &bg_color;
+                }
+                int i = y * w + letter_x + x;
+                buffer[i] = color;
+                head = head >> 1;
+            }
+            byte += 1;
+        }
+        letter_x += 7;
+        text += 1;
+    }
+
+    return result;
+}
+
+static void TextBoxDraw(Renderer *renderer)
+{
     SDL_Surface *row;
     // TODO: change these magic values later
     SDL_Surface *body = SDL_CreateRGBSurface(0, 136, 34, 32, 0, 0, 0, 0);
@@ -165,7 +207,8 @@ static void TextBoxDraw(Renderer *renderer) {
         if (text[0] == 0) {
             continue;
         }
-        row = TTF_RenderText_Solid(renderer->font, text, renderer->accent);
+        // row = TTF_RenderText_Solid(renderer->font, text, renderer->accent);
+        row = RenderText(text, renderer->accent, renderer->base);
         if (!row) {
             LogWarning("Unable to render text '%s': %s", text, TTF_GetError());
             continue;

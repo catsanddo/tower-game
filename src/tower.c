@@ -17,6 +17,7 @@
 #include "cutscene.h"
 #include "script.h"
 #include "sound.h"
+#include "font.h"
 
 #include "game.c"
 #include "log.c"

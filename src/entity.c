@@ -251,8 +251,13 @@ void EntityUpdate(Game *game)
     }
 
     SetCamera(game->renderer, player->co);
-    player->co.offset.x += player->momentum.x * ENTITY_SPEED;
-    player->co.offset.y += player->momentum.y * ENTITY_SPEED;
+    if (game->input.cancel) {
+    player->co.offset.x += player->momentum.x * ENTITY_SPEED * 4;
+        player->co.offset.y += player->momentum.y * ENTITY_SPEED * 4;
+    } else {
+        player->co.offset.x += player->momentum.x * ENTITY_SPEED;
+        player->co.offset.y += player->momentum.y * ENTITY_SPEED;
+    }
     if (Abs(player->co.offset.x) >= TILE || Abs(player->co.offset.y) >= TILE) {
         player->co.position.x += player->momentum.x;
         player->co.position.y += player->momentum.y;

@@ -24,7 +24,7 @@ Pre-alpha release
 - [ ] save log to new location on fatal crash
 - [ ] final animation speeds
 - [X] elder fruit cutscene
-- [ ] adjust font to remove accidental swears
+- [X] adjust font to remove accidental swears
 - [ ] placeholder end screens
 - [ ] title screen
 - [ ] animation bug on triggers and walking into walls
@@ -38,6 +38,7 @@ Pre-alpha release
 - [X] mook
 - [ ] tower top endings
 - [ ] ruins ending
+- [ ] add foreground tile layer
 
 - [X] cutscene system
 - [X] scripting
