@@ -413,6 +413,9 @@ int ScriptInterpret(Game *game) {
             RegisterCutscene(game, cutscene_table[cutscene_index], 0);
         }
         script->offset += 4;
+    } else if (cmd_name[1] == 'Q' && cmd_name[2] == 'U' && cmd_name[3] == 'K') {
+        CE_u64 time = ScriptGetArg(script, 0);
+        SetQuakeTime(game->renderer, time);
     } else {
         result = SCRIPT_ERROR;
     }

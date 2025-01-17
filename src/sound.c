@@ -5,6 +5,7 @@
 const char *sfx_names[] = {
     "blip",
     "plib",
+    "quake",
 };
 
 const char *track_names[] = {

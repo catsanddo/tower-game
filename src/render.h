@@ -79,6 +79,9 @@ struct Renderer {
     CE_u8 animations_disable;
     CE_u8 camera_lock;
     int prompt_state;
+    int quake_time;
+    int quake_dir;
+    int quake_offset;
     SDL_Renderer *renderer;
     SDL_Texture *canvas;
     TTF_Font *font;
@@ -115,6 +118,7 @@ void RendererDisableCameraLock(Renderer *renderer);
 void RendererDisableAnimations(Renderer *renderer);
 
 void SetCamera(Renderer *renderer, Coord co);
+void SetQuakeTime(Renderer *renderer, int time);
 
 SpriteHandle SpriteLoad(Game *game, const char *name, CE_u32 frame_delay);
 SpriteHandle SpriteNew(Renderer *renderer, SDL_Texture *texture, CE_u32 frame_delay);

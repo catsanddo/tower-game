@@ -23,7 +23,7 @@ static SDL_Rect CameraTransform(Renderer *renderer, Coord co)
         };
     }
     
-    SDL_Rect result;
+    SDL_Rect result = {0};
     result.w = TILE;
     result.h = TILE;
     
@@ -49,6 +49,11 @@ static SDL_Rect CameraTransform(Renderer *renderer, Coord co)
     } else if (cam.co.position.y * TILE + cam.co.offset.y + 4 * TILE >= renderer->map.map_height * TILE - TILE) {
         result.y = co.position.y * TILE + co.offset.y;
         result.y -= renderer->map.map_height * TILE - HEIGHT;
+    }
+
+    // Quake
+    if (renderer->quake_time > 0 || renderer->quake_offset != 0) {
+        result.x += renderer->quake_offset;
     }
 
     return result;
@@ -447,6 +452,15 @@ void RendererDraw(Renderer *renderer)
         renderer->hook(renderer, renderer->hook_data);
     }
 
+    // Renderer update
+    if (renderer->quake_time > 0 || renderer->quake_offset != 0) {
+        renderer->quake_time -= 1000 / MAX_FPS;
+        renderer->quake_offset += renderer->quake_dir;
+        if (Abs(renderer->quake_offset) >= 8) {
+            renderer->quake_dir *= -1;
+        }
+    }
+
     Q(SDL_SetRenderTarget(renderer->renderer, 0));
     Q(SDL_RenderCopy(renderer->renderer, renderer->canvas, 0, 0));
     SDL_RenderPresent(renderer->renderer);
@@ -521,6 +535,12 @@ void RendererDisableAnimations(Renderer *renderer)
 void SetCamera(Renderer *renderer, Coord co)
 {
     renderer->camera.co = co;
+}
+
+void SetQuakeTime(Renderer *renderer, int time)
+{
+    renderer->quake_time = time;
+    renderer->quake_dir = 1;
 }
 
 SpriteHandle SpriteLoad(Game *game, const char *name, CE_u32 frame_delay)

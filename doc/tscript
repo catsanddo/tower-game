@@ -55,6 +55,9 @@ whitespace insensitive
 
 :MAP - ( mapID,x,y,dir ) jump to new map at x and y, facing dir; enter map at event 20
 :CUT - ( cutsceneID ) trigger new cutscene
+:QUK - ( n ) shake screen for n milliseconds
+:TRK - ( n ) play track n
+:SFX - ( n ) play sound effect n
 
 #0400 - Elder move
 :FLJ0050 :CUT0000 :FLS0050 :END

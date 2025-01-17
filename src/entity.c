@@ -145,7 +145,7 @@ void EntityResetFlags(Game *game, EntityHandle id, CE_u64 flags)
 
     entity->flags &= ~flags;
     // safeguard against erroneous deactivation
-    entity->flags |= ENTITY_ACTIVE;
+    // entity->flags |= ENTITY_ACTIVE;
 }
 
 void EntityUpdate(Game *game)

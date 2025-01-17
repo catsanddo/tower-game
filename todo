@@ -17,7 +17,7 @@
 - [X] player direction on map change
 - [ ] fix audio pops in sfxs
 - [ ] option to not loop audio
-- [?] script system make it have sequence of commands in one frame
+- [ ] script system make it have sequence of commands in one frame
 - [ ] save/load system
 
 Pre-alpha release
@@ -26,6 +26,7 @@ Pre-alpha release
 - [X] elder fruit cutscene
 - [X] adjust font to remove accidental swears
 - [ ] placeholder end screens
+- [X] quake sfx
 - [ ] title screen
 - [ ] animation bug on triggers and walking into walls
 - [ ] final music

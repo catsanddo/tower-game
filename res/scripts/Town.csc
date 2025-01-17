@@ -1,7 +1,15 @@
 #0020
 :TRK0008
+:FLJ0025 :EVE0021
 :FLJ0028
 :EMV0500,0001,0001
+:FDI :END
+#0021 - empty town
+:EFR0200,0001
+:EFR0300,0001
+:EFR0400,0001
+:EFR0500,0001
+:EFR0600,0001
 :FDI :END
 
 #0100 - Forest exits
@@ -255,13 +263,15 @@
 "\nanyone." :PAU
 :TCL :FLS0300 :END
 #0501 - after first
+:FLJ0305 :SKP0001
+:SKP0002
 :FLJ0027 :EVE0502
 :TXB "Okay...fine." :PAU
 "\nYou get me some"
 "\nsweet pala fruit,"
 "\nand maybe I'll"
 "\nmove for you." :PAU
-:TCL :END
+:TCL :FLS0305 :END
 #0502 - Got fruit
 :FLJ0301 :EVE0503
 :TXB "Haha,I didn't"
