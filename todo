@@ -25,12 +25,13 @@ Pre-alpha release
 - [ ] final animation speeds
 - [X] elder fruit cutscene
 - [X] adjust font to remove accidental swears
-- [ ] placeholder end screens
+- [X] placeholder end screens
 - [X] quake sfx
 - [ ] title screen
 - [ ] animation bug on triggers and walking into walls
 - [ ] final music
 - [ ] remove debug elements
+- [ ] proper stop to end script
 
 - [ ] elder move sfx
 

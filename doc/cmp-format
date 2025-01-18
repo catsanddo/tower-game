@@ -1,15 +1,15 @@
 LITTLE ENDIAN
 
-magic            | 4  | "CMP" $5a
-width            | 4  | unsigned
-height           | 4  | unsigned
-tilesheet        | 16 | res/tilesheets/*.png - only *
-entity_count     | 4  | # of entities
-tile_sheet_count | 4  | size of tile types section
-base color       | 4  | rgba8888
-accent color     | 4  | rgba8888
+00 | magic            | 4  | "CMP" $5a
+04 | width            | 4  | unsigned
+08 | height           | 4  | unsigned
+0C | tilesheet        | 16 | res/tilesheets/*.png - only *
+1C | entity_count     | 4  | # of entities
+20 | tile_sheet_count | 4  | size of tile types section
+24 | base color       | 4  | rgba8888
+28 | accent color     | 4  | rgba8888
 
-tile_map         | ~  | indexes; one word per width * height
+2C | tile_map         | ~  | indexes; one word per width * height
 
 entities         | ~  | 16 bytes per entry
 	dword - entity type
