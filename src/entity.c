@@ -20,7 +20,7 @@ const EntityTemplate entity_table[] = {
     {"Mook",       200, ENTITY_VISIBLE | ENTITY_SOLID | ENTITY_INTERACTABLE | ENTITY_ANIMATE},
     {"The Seer",   175, ENTITY_VISIBLE | ENTITY_SOLID | ENTITY_INTERACTABLE | ENTITY_ANIMATE},
 
-    {"Player",     64, ENTITY_VISIBLE | ENTITY_PLAYER},
+    {"Player",     113, ENTITY_VISIBLE | ENTITY_PLAYER},
 };
 
 EntityHandle EntityNew(Game *game, CE_u64 index, Vec2 position, CE_u64 eventID)
@@ -178,6 +178,8 @@ void EntityUpdate(Game *game)
                         // TODO: find a better way to request quitting
                         game->input.quit = 1;
                     }
+                    SpriteResetAnimation(game->renderer, player->sprite);
+                    SpriteStopAnimation(game->renderer, player->sprite);
                 }
             }
         }
@@ -242,9 +244,11 @@ void EntityUpdate(Game *game)
                 game->input_lock = 1;
                 game->triggered = 0;
                 SpriteStartAnimation(game->renderer, player->sprite);
+            } else {
+                SpriteResetAnimation(game->renderer, player->sprite);
+                SpriteStopAnimation(game->renderer, player->sprite);
             }
         } else {
-            // TODO: debug why this doesn't fire when standing still
             SpriteResetAnimation(game->renderer, player->sprite);
             SpriteStopAnimation(game->renderer, player->sprite);
         }

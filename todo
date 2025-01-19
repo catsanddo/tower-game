@@ -28,7 +28,7 @@ Pre-alpha release
 - [X] placeholder end screens
 - [X] quake sfx
 - [ ] title screen
-- [ ] animation bug on triggers and walking into walls
+- [X] animation bug on triggers and walking into walls
 - [ ] final music
 - [ ] remove debug elements
 - [ ] proper stop to end script
