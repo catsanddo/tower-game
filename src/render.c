@@ -153,6 +153,9 @@ static SDL_Surface *RenderText(char *text, SDL_Color fg, SDL_Color bg)
     int letter_x = 1;
 
     SDL_Surface *result = SDL_CreateRGBSurface(0, w, h, 32, 0, 0, 0, 0);
+    if (!result) {
+        return result;
+    }
     CE_u32 *buffer = result->pixels;
     CE_u32 fg_color = SDL_MapRGB(result->format, fg.r, fg.g, fg.b);
     CE_u32 bg_color = SDL_MapRGB(result->format, bg.r, bg.g, bg.b);
@@ -205,17 +208,16 @@ static void TextBoxDraw(Renderer *renderer)
             renderer->base.g, renderer->base.b, renderer->base.a);
     Q(SDL_FillRect(body, 0, base_color));
 
-    int line_height = TTF_FontLineSkip(renderer->font) + 1;
+    int line_height = 8;
     for (int i = 0; i < rows_count; ++i) {
         char *text = renderer->text_box.rows[i];
         // empty string
         if (text[0] == 0) {
             continue;
         }
-        // row = TTF_RenderText_Solid(renderer->font, text, renderer->accent);
         row = RenderText(text, renderer->accent, renderer->base);
         if (!row) {
-            LogWarning("Unable to render text '%s': %s", text, TTF_GetError());
+            LogWarning("Unable to render text '%s': %s", text, SDL_GetError());
             continue;
         }
         SDL_Rect dest = {0, line_height*i, row->w, row->h};
@@ -298,9 +300,9 @@ static void PromptRender(Renderer *renderer)
     Q(SDL_RenderDrawRect(renderer->renderer, &text_box));
 
     // render text options
-    text_surface = TTF_RenderText_Solid(renderer->font, "Yes", renderer->accent);
+    text_surface = RenderText("Yes", renderer->accent, renderer->base);
     if (!text_surface) {
-        LogWarning("Unable to render text 'Yes': %s", TTF_GetError());
+        LogWarning("Unable to render text 'Yes': %s", SDL_GetError());
     }
     text_box.w = text_surface->w;
     text_box.h = text_surface->h;
@@ -315,9 +317,9 @@ static void PromptRender(Renderer *renderer)
     text_box.y = base_y+4;
     Q(SDL_RenderCopy(renderer->renderer, text, 0, &text_box));
     
-    text_surface = TTF_RenderText_Solid(renderer->font, "No", renderer->accent);
+    text_surface = RenderText("No", renderer->accent, renderer->base);
     if (!text_surface) {
-        LogWarning("Unable to render text 'No': %s", text, TTF_GetError());
+        LogWarning("Unable to render text 'No': %s", text, SDL_GetError());
     }
     text_box.w = text_surface->w;
     text_box.h = text_surface->h;
@@ -366,12 +368,6 @@ int RendererInit(Renderer *renderer, SDL_Window *window)
         return 0;
     }
     
-    renderer->font = TTF_OpenFont(FONT_PATH, FONT_SIZE);
-    if (!renderer->font) {
-        AlertError("Resource Error", "Could not open '%s': %s", FONT_PATH, TTF_GetError());
-        return 0;
-    }
-
     renderer->camera_lock = 1;
 
     return 1;
@@ -381,8 +377,6 @@ void RendererDeinit(Renderer *renderer)
 {
     SDL_DestroyTexture(renderer->canvas);
     SDL_DestroyRenderer(renderer->renderer);
-
-    TTF_CloseFont(renderer->font);
 
     *renderer = (Renderer) {0};
 }

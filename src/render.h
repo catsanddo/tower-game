@@ -9,7 +9,6 @@
 typedef struct SDL_Texture SDL_Texture;
 typedef struct SDL_Window SDL_Window;
 typedef struct SDL_Renderer SDL_Renderer;
-typedef struct _TTF_Font TTF_Font;
 
 typedef struct Game Game;
 
@@ -84,7 +83,6 @@ struct Renderer {
     int quake_offset;
     SDL_Renderer *renderer;
     SDL_Texture *canvas;
-    TTF_Font *font;
     RenderHookFn hook;
     void *hook_data;
     SDL_Color base;

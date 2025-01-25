@@ -1,7 +1,7 @@
 #!/bin/bash
 
 INC_PATH="-I../include"
-LIBS="-lSDL2 -lSDL2_image -lSDL2_ttf -lm"
+LIBS="-lSDL2 -lSDL2_image -lm"
 LIB_PATH="-L../lib"
 
 mkdir -p bin

@@ -17,6 +17,7 @@
 #include "../src/cutscene.h"
 #include "../src/script.h"
 #include "../src/sound.h"
+#include "../src/font.h"
 
 #include "../src/game.c"
 #include "../src/log.c"
@@ -228,7 +229,7 @@ static void render_clicks(Renderer *renderer, void *data) {
             // type #
             char type[3];
             snprintf(type, 3, "%u", e->entities[i].type);
-            SDL_Surface *tmp = TTF_RenderText_Solid(renderer->font, type, e->color);
+            SDL_Surface *tmp = RenderText(type, e->color, renderer->base);
             rect.x += 1;
             rect.y += 1;
             rect.w = tmp->w;
@@ -262,7 +263,7 @@ static void render_clicks(Renderer *renderer, void *data) {
         char *type = CE_ArenaPush(e->game->frame_arena, size+1);
         snprintf(type, size+1, "%s (%u)", type_name, e->active->type);
         
-        SDL_Surface *tmp = TTF_RenderText_Solid(renderer->font, type, e->color);
+        SDL_Surface *tmp = RenderText(type, e->color, renderer->base);
         rect = (SDL_Rect) {0, 2, tmp->w, tmp->h};
         SDL_Texture *tex = SDL_CreateTextureFromSurface(renderer->renderer, tmp);
         SDL_FreeSurface(tmp);
@@ -274,7 +275,7 @@ static void render_clicks(Renderer *renderer, void *data) {
         } else {
             snprintf(type, size+1, "Event: %s", e->number);
         }
-        tmp = TTF_RenderText_Solid(renderer->font, type, e->color);
+        tmp = RenderText(type, e->color, renderer->base);
         rect = (SDL_Rect) {0, 10, tmp->w, tmp->h};
         tex = SDL_CreateTextureFromSurface(renderer->renderer, tmp);
         SDL_FreeSurface(tmp);
@@ -284,14 +285,14 @@ static void render_clicks(Renderer *renderer, void *data) {
     CE_u64 size = 32;
     char *text = CE_ArenaPush(e->game->frame_arena, size + 1);
     snprintf(text, size+1, "X: %d", e->selection.x);
-    SDL_Surface *tmp = TTF_RenderText_Solid(renderer->font, text, e->color);
+    SDL_Surface *tmp = RenderText(text, e->color, renderer->base);
     rect = (SDL_Rect) {120, 2, tmp->w, tmp->h};
     SDL_Texture *tex = SDL_CreateTextureFromSurface(renderer->renderer, tmp);
     SDL_FreeSurface(tmp);
     SDL_RenderCopy(renderer->renderer, tex, 0, &rect);
     SDL_DestroyTexture(tex);
     snprintf(text, size+1, "Y: %d", e->selection.y);
-    tmp = TTF_RenderText_Solid(renderer->font, text, e->color);
+    tmp = RenderText(text, e->color, renderer->base);
     rect = (SDL_Rect) {120, 10, tmp->w, tmp->h};
     tex = SDL_CreateTextureFromSurface(renderer->renderer, tmp);
     SDL_FreeSurface(tmp);

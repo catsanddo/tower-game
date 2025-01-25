@@ -9,10 +9,6 @@
 
 #define TILE 16
 
-#define FONT_SIZE 7
-#define FONT_PATH "res/fonts/PublicPixel.ttf"
-#define FONT_COLOR (SDL_Color) { 245, 245, 245, 255 }
-#define FONT_BG (SDL_Color) { 0, 0, 0, 255 }
 #define TBOX_TOP (SDL_Rect) { 10, 10, 140, 38 }
 #define TBOX_BOTTOM (SDL_Rect) { 10, 100, 140, 38 }
 #define TBOX_LIMIT 64

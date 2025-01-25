@@ -42,12 +42,6 @@ int GameInit(Game *g)
         return 0;
     }
 
-    if (TTF_Init() < 0) {
-        AlertError("SDL_ttf Error", "Loading SDL_ttf functions: %s", TTF_GetError());
-        SDL_Quit();
-        return 0;
-    }
-
     g->window = SDL_CreateWindow("Tower Game",
             SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
             SCREEN_WIDTH, SCREEN_HEIGHT, 0);
@@ -101,7 +95,6 @@ void GameDeinit(Game *g)
     CE_ArenaFree(g->map_arena);
     CE_ArenaFree(g->frame_arena);
 
-    TTF_Quit();
     IMG_Quit();
     
     SDL_DestroyWindow(g->window);

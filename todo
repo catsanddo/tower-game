@@ -32,8 +32,8 @@ Pre-alpha release
 - [ ] final music
 - [ ] remove debug elements
 - [X] proper stop to end script
-
 - [ ] elder move sfx
+- [ ] deserted town music
 
 - [ ] instant text system (in single quotes maybe) (Bug man's "hey!")
 - [X] town npcs
@@ -55,5 +55,5 @@ Pre-alpha release
 - [ ] command buffer for cheatcodes
 - [ ] make curtain animation look pretty
 - [ ] verify framerate (I can't believe that it's right)
-- [ ] fix animation for higher framerate
+- [X] fix animation for higher framerate
 - [ ] make player finish a full cycle on animation end
