@@ -22,7 +22,7 @@
 
 Pre-alpha release
 - [ ] save log to new location on fatal crash
-- [ ] final animation speeds
+- [X] final animation speeds
 - [X] elder fruit cutscene
 - [X] adjust font to remove accidental swears
 - [X] placeholder end screens
