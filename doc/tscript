@@ -58,6 +58,7 @@ whitespace insensitive
 :QUK - ( n ) shake screen for n milliseconds
 :TRK - ( n ) play track n
 :SFX - ( n ) play sound effect n
+:STP - (  ) suspends the game indefinitely
 
 #0400 - Elder move
 :FLJ0050 :CUT0000 :FLS0050 :END

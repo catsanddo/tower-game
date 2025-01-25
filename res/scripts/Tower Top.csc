@@ -22,7 +22,7 @@
 "\nplace." :PAU
 :EVE0203
 #0203 - end
-:TCR "\n      The End      " :PAU :TCL :FDI :TRK0001 :END
+:TCR "\n      The End      " :STP
 
 #0999 - debugger of doom
 :FLJ0024 :EVE1000

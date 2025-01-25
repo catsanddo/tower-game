@@ -31,7 +31,7 @@ Pre-alpha release
 - [X] animation bug on triggers and walking into walls
 - [ ] final music
 - [ ] remove debug elements
-- [ ] proper stop to end script
+- [X] proper stop to end script
 
 - [ ] elder move sfx
 

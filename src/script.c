@@ -416,6 +416,8 @@ int ScriptInterpret(Game *game) {
     } else if (cmd_name[1] == 'Q' && cmd_name[2] == 'U' && cmd_name[3] == 'K') {
         CE_u64 time = ScriptGetArg(script, 0);
         SetQuakeTime(game->renderer, time);
+    } else if (cmd_name[1] == 'S' && cmd_name[2] == 'T' && cmd_name[3] == 'P') {
+        return SCRIPT_RUNNING;
     } else {
         result = SCRIPT_ERROR;
     }
